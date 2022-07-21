@@ -232,6 +232,13 @@ export default function App() {
         </div>
       </div>
       {/* Footer Content */}
+      <div className="relative inset-x-0 bg-gray-900">
+        <div className="relative mx-auto container">
+          <div className="relative flex justify-center items-center text-white text-center text-base p-4">
+            KerjaKuda © 2022 All rights reserved.
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
