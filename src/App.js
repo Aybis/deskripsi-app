@@ -1,7 +1,8 @@
-import { CheckIcon } from '@heroicons/react/solid';
+import { ArrowNarrowUpIcon, CheckIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
 import { CardApp } from './components';
 import logo from './assets/images/pins.png';
+import { useLocation } from 'react-router-dom';
 
 const dataKategori = [
   {
@@ -104,9 +105,30 @@ const dataApp = [
 ];
 
 export default function App() {
+  const location = useLocation();
+
   const [kategori, setkategori] = useState(dataKategori[0]);
   const [dataByKategori, setdataByKategori] = useState(dataApp);
   const [isLoading, setisLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
+    }
+  };
+
+  const handlerButtonToUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  window.addEventListener('scroll', toggleVisible);
 
   const handleKategori = (kategori) => {
     setisLoading(true);
@@ -123,9 +145,14 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen max-h-full bg-white">
+    <div className="relative min-h-screen max-h-full">
       {/* Header Content */}
-      <div className="sticky z-10 inset-x-0 top-0 transform bg-gray-900">
+      <div
+        className={[
+          'sticky z-10 inset-x-0 top-0 transform  backdrop-blur-md transition-all duration-300',
+
+          visible ? 'bg-none border-b-2 border-gray-200' : 'bg-gray-900',
+        ].join(' ')}>
         <div className="relative mx-auto container px-8 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -134,13 +161,22 @@ export default function App() {
             </div>
 
             {/* Menu */}
-            <div className="relative hidden items-end">
+            <div className="relative hidden md:flex items-end">
               <ul className="relative flex gap-4">
-                {Array.from({ length: 5 }).map((item, index) => (
+                {Array.from({ length: 2 }).map((item, index) => (
                   <li
-                    className="text-base font-normal text-gray-100 leading-relaxed tracking-wide uppercase"
+                    className={[
+                      'text-base font-normal text-gray-100 leading-relaxed tracking-wide cursor-pointer pb-1 border-b-2 transition-all duration-300 uppercase',
+                      visible
+                        ? 'text-gray-900  hover:border-gray-800'
+                        : 'text-gray-100  hover:border-gray-200',
+
+                      location.pathname === '/' && index === 0
+                        ? ` ${visible ? 'border-gray-800' : 'border-gray-200'}`
+                        : 'border-transparent bg-none',
+                    ].join(' ')}
                     key={index}>
-                    Menu {index + 1}
+                    {index === 0 ? ' Apps' : 'Form '}
                   </li>
                 ))}
               </ul>
@@ -150,11 +186,11 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="relative mt-8">
+      <div className="relative mt-8 mb-10">
         <div className="relative mx-auto container md:p-4">
           {/* Section Kategori */}
           <div className="relative flex flex-col justify-center items-center">
-            <h2 className="text-2xl tracking-wide font-medium text-gray-800">
+            <h2 className="text-2xl tracking-wider font-semibold text-gray-800">
               Kategori Aplikasi
             </h2>
 
@@ -165,10 +201,10 @@ export default function App() {
                     title={`Kategori ${item.nama}`}
                     onClick={() => handleKategori(item)}
                     className={[
-                      'relative flex items-center rounded-md px-4 py-2 justify-center cursor-pointer transition-all duration-300 gap-1.5',
+                      'relative flex items-center rounded-md px-4 py-2 justify-center cursor-pointer transition-all duration-300 gap-1.5 hover:bg-gray-900 hover:text-white hover:font-medium hover:tracking-wide',
                       kategori.nama === item.nama
                         ? 'bg-gray-900 shadow-md text-gray-100 font-medium tracking-wide'
-                        : ' bg-transparent text-gray-900 font-light border border-gray-200',
+                        : ' bg-transparent text-gray-900 font-light border border-gray-500',
                     ].join(' ')}
                     key={index}>
                     <p className="leading-relaxed">{item.nama}</p>
@@ -183,12 +219,12 @@ export default function App() {
           {/* End Section Kategori */}
 
           {/* Section Aplikasi Dekstop */}
-          <div className="relative hidden md:flex space-x-8 mx-auto container mt-12 transition-all duration-300">
+          <div className="relative hidden md:flex space-x-5 mx-auto container mt-12 transition-all duration-300">
             {isLoading ? (
               'Loading...'
             ) : (
               <>
-                <div className="relative flex flex-col 2xl:w-1/2 space-y-8 transition-all duration-300 w-full">
+                <div className="relative flex flex-col 2xl:w-1/2 space-y-5 transition-all duration-300 w-full">
                   {dataByKategori
                     .filter((item, index) => index % 2 === 0)
                     .map((item, index) => (
@@ -196,7 +232,7 @@ export default function App() {
                     ))}
                 </div>
 
-                <div className="relative flex flex-col 2xl:w-1/2 space-y-8 transition-all duration-300 w-full">
+                <div className="relative flex flex-col 2xl:w-1/2 space-y-5 transition-all duration-300 w-full">
                   {dataByKategori
                     .filter((item, index) => index % 2 !== 0)
                     .map((item, index) => (
@@ -220,7 +256,7 @@ export default function App() {
             {isLoading ? (
               'Loading...'
             ) : (
-              <div className="relative grid grid-cols-1 gap-6">
+              <div className="relative grid grid-cols-1 gap-5">
                 {dataByKategori.map((item, index) => (
                   <CardApp index={index} item={item} key={index} />
                 ))}
@@ -231,14 +267,26 @@ export default function App() {
           {/* End Section Aplikasi Dekstop */}
         </div>
       </div>
+
       {/* Footer Content */}
       <div className="relative inset-x-0 bg-gray-900">
         <div className="relative mx-auto container">
-          <div className="relative flex justify-center items-center text-white text-center text-base p-4">
+          <div className="relative flex justify-center items-center text-white text-center text-base px-4 py-6">
             KerjaKuda © 2022 All rights reserved.
           </div>
         </div>
       </div>
+
+      {/* Button go to top */}
+      {visible && (
+        <div className="max-w-md mx-auto relative container">
+          <div
+            onClick={() => handlerButtonToUp()}
+            className="group hover:scale-110 hover:shadow-lg shadow-gray-900/50 fixed right-10 z-20 bottom-20 bg-gray-900 rounded-full p-2 cursor-pointer hover:bg-gray-800 transition-all duration-300 ">
+            <ArrowNarrowUpIcon className="h-5 lg:h-8  text-white" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
