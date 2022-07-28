@@ -1,0 +1,58 @@
+[
+    {
+        "nama": "Salira Sitepu",
+        "posisi": "PJ AVP OPERATION PLANNING & IT MANAGEMENT",
+        "nik": "875039",
+        "image": "",
+        "note": "Esse proident deserunt cillum labore ut non anim pariatur.",
+        "unit": ""
+    },
+    {
+        "nama": "Teguh Ikhlas Miranto",
+        "posisi": "OFF 1 OPERATION PLANNING",
+        "nik": "855039",
+        "image": "",
+        "note": "Velit ullamco non excepteur nisi.Id occaecat elit irure irure.",
+        "unit": "Operation Planning"
+    },
+    {
+        "nama": "Novita Haryanti Laura",
+        "posisi": "OFF 2 OPERATION PLANNING",
+        "nik": "815039",
+        "image": "",
+        "note": "Velit ullamco non excepteur nisi.Id occaecat elit irure irure.",
+        "unit": "Operation Planning"
+    },
+    {
+        "nama": "Efraim Theofilus Suryanta",
+        "posisi": "OFF 1 IT BUSINESS MANAGEMENT",
+        "nik": "805042",
+        "image": "",
+        "note": "Velit ullamco non excepteur nisi.Id occaecat elit irure irure.",
+        "unit": "IT Management"
+    },
+    {
+        "nama": "Ahmad Fauzi Hanif",
+        "posisi": "OFF 3 IT INFRASTRUCTURE",
+        "nik": "935666",
+        "image": "",
+        "note": "Tempor elit id sint sint excepteur consectetur ea.",
+        "unit": "IT Management"
+    },
+    {
+        "nama": "Abdul Muchtar Astria",
+        "posisi": "FrontEnd Developer",
+        "nik": "9618026",
+        "image": "",
+        "note": "Esse proident deserunt cillum labore ut non anim pariatur.",
+        "unit": "Developer"
+    },
+    {
+        "nama": "Bayu Respati",
+        "posisi": "BackEnd Developer",
+        "nik": "9020015",
+        "image": "",
+        "note": "Esse proident deserunt cillum labore ut non anim pariatur.",
+        "unit": "Developer"
+    }
+]

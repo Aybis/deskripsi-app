@@ -1,0 +1,118 @@
+[
+    {
+        "id": 1,
+        "bulan": "March",
+        "achive": [
+            {
+                "title": "Launching Aplikasi Absensi MyDay",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Pembuatan Aplikasi SIDARLING (Tahap 1)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Integrasi Aplikasi SIDARLING dan LPL",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "bulan": "April",
+        "achive": [
+            {
+                "title": "Pembuatan Aplikasi IOTA",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Penambahan Fitur Inforekan pada MyDay",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Penambahan Fitur Ulang Tahun pada MyDay",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "bulan": "May",
+        "achive": [
+            {
+                "title": "Penambahan Fitur Hari Libur pada MyDay",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "bulan": "June",
+        "achive": [
+            {
+                "title": "Membuat Aplikasi MyDay"
+            },
+            {
+                "title": "Membuat Aplikasi MyDay"
+            },
+            {
+                "title": "Membuat Aplikasi MyDay"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "bulan": "July",
+        "achive": [
+            {
+                "title": "Improvement Aplikasi CRM (Tahap 1)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Improvement Aplikasi CRM (Tahap 2)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Pembuatan Dashboard Funnel",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Pembuatan Mockup Aplikasi ENMANT",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Done",
+                "note": "",
+                "pic": "Team Developer"
+            }
+        ]
+    }
+]

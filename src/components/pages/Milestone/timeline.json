@@ -1,0 +1,158 @@
+[
+    {
+        "id": 1,
+        "bulan": "August",
+        "achive": [
+            {
+                "title": "Aplikasi Pengelolaan Listrik Outdoor Telkom",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "On Progress",
+                "note": "Mockup dan Database sudah dibuat",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Membuat Aplikasi Pengajuan Akun",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "Proses Kompulir",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Follow Up Hasil VA Aplikasi PINS (1 & 2)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "On Progress",
+                "note": "Menunggu hasil scan ulang",
+                "pic": "Theo, Hanif"
+            },
+            {
+                "title": "Implementasi DG (versi 1)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "On Progress",
+                "note": "Menunggu Penetapan Data Owner",
+                "pic": "Theo"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "bulan": "September",
+        "achive": [
+            {
+                "title": "Integrasi Aplikasi Sidarling dgn Aplikasi Invoice",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "Persiapan Koordinasi dengan Team Satgas",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Improvement Aplikasi Inventory",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "Penyelesain Proses Bisnis Aplikasi",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Membuat Aplikasi Mobile MyDay",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "Mockup, Proses Bisnis, Timeline, dan Database sudah dibuat",
+                "pic": "Team Developer"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "bulan": "October",
+        "achive": [
+            {
+                "title": "Improvement Aplikasi Panjar Online (Simplifikasi Bispro) - Part 1",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "Team Developer"
+            },
+            {
+                "title": "Improvement Aplikasi Panjar Online (Simplifikasi Bispro) - Part 2",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "Team Developer"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "bulan": "November",
+        "achive": [
+            {
+                "title": "VA Aplikasi PINS ke-3 (Triwulanan)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Form UAT Aplikasi Online",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Aplikasi Pre-Sales (LOP & Partnership)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Aplikasi E2E PINS (Mod, Legal, & Procurement)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "bulan": "Desember",
+        "achive": [
+            {
+                "title": "Renewal Whatsapp API",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "Theo, Hanif"
+            },
+            {
+                "title": "Integrasi All Aplikasi E2E PINS",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Aplikasi E2E (Modul Performansi MS)",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Improvement Audit Migrasi",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            },
+            {
+                "title": "Pemasangan CCTV Ruang Server PINS",
+                "description": "Membuat Aplikasi Pengajuan Akun",
+                "status": "Waiting",
+                "note": "",
+                "pic": "All Team IT"
+            }
+        ]
+    }
+]
