@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout } from '../../Layout';
-import { CardFeeds, CardMilestone, CardStatus } from '../../molecules';
+import { CardFeeds, CardMilestone } from '../../molecules';
 import data from './data.json';
 import timeline from './timeline.json';
 
@@ -13,7 +13,9 @@ export default function Index() {
         <h1 className="text-2xl font-semibold leading-relaxed tracking-wide text-gray-900">
           Our Milestone
         </h1>
-        <CardStatus />
+        <p className="text-gray-600 leading-relaxed tracking-wide">
+          Achievement & Timeline in 2022
+        </p>
       </div>
 
       <div className="relative mt-12 px-4 sm:px-0">
@@ -29,7 +31,7 @@ export default function Index() {
             />
           </div>
           <div className="relative sm:grid-cols-3 lg:col-span-5 pl-4 xl:pl-0">
-            <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 transition-all duration-300">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-4 transition-all duration-300">
               {dataActive.achive.map((item, index) => (
                 <CardMilestone item={item} key={index} />
               ))}
@@ -52,8 +54,8 @@ export default function Index() {
               handlerClick={(data) => settimelineActive(data)}
             />
           </div>
-          <div className="relative sm:grid-cols-3 lg:col-span-5 pl-4 xl:pl-0">
-            <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 transition-all duration-300">
+          <div className="relative sm:grid-cols-2 md:grid-cols-3 lg:col-span-5 pl-4 xl:pl-0">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-4 transition-all duration-300">
               {timelineActive.achive.map((item, index) => (
                 <CardMilestone item={item} key={index} />
               ))}
