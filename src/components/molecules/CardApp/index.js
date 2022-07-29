@@ -1,5 +1,7 @@
 import { ClipboardIcon, PaperAirplaneIcon } from '@heroicons/react/solid';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Index({ item, index, left = true, right = false }) {
   return (
@@ -28,11 +30,14 @@ export default function Index({ item, index, left = true, right = false }) {
         </div>
 
         <div className="relative flex flex-col max-h-fit gap-2 justify-center items-center">
-          <img
-            src={item.image}
+          <LazyLoadImage
+            effect="blur"
             alt=""
+            height={'auto'}
             className="rounded object-cover object-center max-h-full max-w-full"
+            src={item.image} // use normal <img> attributes as props
           />
+
           {item.note !== '' ? (
             <p className="text-sm font-light text-red-500 text-center">
               *diharuskan absensi terlebih dahulu untuk mengakses aplikasi ini.

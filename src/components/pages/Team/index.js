@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from '../../Layout';
 import data from './data.json';
 import photo1 from '../../../assets/images/DSC02085.jpeg';
@@ -9,9 +9,17 @@ import photo5 from '../../../assets/images/DSC02220.jpeg';
 import photo6 from '../../../assets/images/DSC02264.jpeg';
 import photo7 from '../../../assets/images/IMG_0014.JPG';
 import photo8 from '../../../assets/images/IMG_0022.JPG';
-import { CardImage, CardPerson } from '../../molecules';
+import { CardImage, CardPerson, Modals } from '../../molecules';
 
 export default function Index() {
+  const [showModal, setshowModal] = useState(false);
+  const [image, setimage] = useState(photo1);
+
+  const handlerClick = (image) => {
+    setshowModal(true);
+    setimage(image);
+  };
+
   return (
     <Layout>
       <div className="relative mx-auto container flex flex-col gap-1.5 justify-center items-center">
@@ -29,9 +37,9 @@ export default function Index() {
           Our Leader
         </h1>
         <div className="relative grid grid-cols-1 sm:grid-cols-3">
-          <CardImage image={photo2} />
-          <CardImage image={photo1} />
-          <CardImage image={photo3} />
+          <CardImage handlerClick={handlerClick} image={photo2} />
+          <CardImage handlerClick={handlerClick} image={photo1} />
+          <CardImage handlerClick={handlerClick} image={photo3} />
         </div>
         <div className="relative p-3">
           <h1 className="text-base font-semibold tracking-wide leading-relaxed text-gray-800 uppercase">
@@ -51,8 +59,16 @@ export default function Index() {
           Team Operation Planning
         </h1>
         <div className="relative grid sm:grid-cols-2 w-full gap-4 mt-3">
-          <CardPerson data={data[1]} image={photo4} />
-          <CardPerson data={data[2]} image={photo4} />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[1]}
+            image={photo4}
+          />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[2]}
+            image={photo4}
+          />
         </div>
       </div>
 
@@ -64,8 +80,16 @@ export default function Index() {
           Team IT Management
         </h1>
         <div className="relative grid sm:grid-cols-2 w-full gap-4 mt-3">
-          <CardPerson data={data[3]} image={photo5} />
-          <CardPerson data={data[4]} image={photo6} />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[3]}
+            image={photo5}
+          />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[4]}
+            image={photo6}
+          />
         </div>
       </div>
 
@@ -77,10 +101,20 @@ export default function Index() {
           Team Developer
         </h1>
         <div className="relative grid sm:grid-cols-2 w-full gap-4 mt-3">
-          <CardPerson data={data[5]} image={photo8} />
-          <CardPerson data={data[6]} image={photo7} />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[5]}
+            image={photo8}
+          />
+          <CardPerson
+            handlerClick={handlerClick}
+            data={data[6]}
+            image={photo7}
+          />
         </div>
       </div>
+
+      <Modals isOpen={showModal} handlerOpen={setshowModal} image={image} />
     </Layout>
   );
 }

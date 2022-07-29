@@ -36,7 +36,7 @@ const dataApp = [
     tagline: 'Nostrud veniam adipisicing consequat esse reprehenderit.',
     image:
       'https://images.unsplash.com/photo-1601972599720-36938d4ecd31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXBwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    note: 'a',
+    note: '',
     kategori: 'kepegawaian',
   },
   {
