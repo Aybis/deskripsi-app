@@ -5,7 +5,7 @@ export default function index({ image, data, handlerClick }) {
   return (
     <div className="relative">
       {/* Image */}
-      <div className="relative group hover:z-30">
+      <div className="relative">
         <CardImage handlerClick={handlerClick} image={image} />
       </div>
       {/* Data Diri */}
