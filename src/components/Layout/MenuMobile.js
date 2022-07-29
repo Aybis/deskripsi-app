@@ -31,7 +31,7 @@ export default function MenuMobile() {
   ];
   return (
     <div className="fixed bottom-0 z-40 inset-x-0 sm:hidden">
-      <div className="relative bg-gray-900 p-4 flex justify-evenly items-center">
+      <div className="relative bg-gray-900 py-3 flex justify-around items-center">
         {routes.map((item, index) => (
           <Link
             to={item.path}
